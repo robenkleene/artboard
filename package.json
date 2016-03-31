@@ -1,0 +1,13 @@
+{
+  "name": "Untitled",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robenkleene/artboard.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}

@@ -1,0 +1,121 @@
+// Grid
+$artboard-grid-px: 10px;
+$artboard-grid-color: rgba(0, 0, 0, .25);
+$artboard-divider-interval: 10;
+$artboard-divider-color: rgba(0, 0, 0, .5);
+$artboard-overlay-opacity: .5;
+$divider-px: $artboard-grid-px * $artboard-divider-interval;
+
+@import 'artboard';
+
+// Assets
+
+// Monitor
+$monitor-padding-px: $artboard-grid-px * 3;
+$monitor-padding: $monitor-padding-px $monitor-padding-px $monitor-padding-px $monitor-padding-px;
+$monitor-background-color: #000;
+$monitor-left: $divider-px - nth($monitor-padding, 4);
+$monitor-top: $divider-px - nth($monitor-padding, 1);
+
+// Screen
+$screen-background-color: #fff;
+$screen-aspect-ratio-y: 3;
+$screen-aspect-ratio-x: 4;
+$screen-width: $divider-px * $screen-aspect-ratio-x;
+$screen-height: $screen-width * ($screen-aspect-ratio-y / $screen-aspect-ratio-x);
+$screen-left: nth($monitor-padding, 4);
+$screen-top: nth($monitor-padding, 1);
+
+// Monitor
+$monitor-height: $screen-height + nth($monitor-padding, 1) + nth($monitor-padding, 3);
+$monitor-width: $screen-width + nth($monitor-padding, 2) + nth($monitor-padding, 4);
+
+// Window
+$window-background-color: rgb(142, 142, 142);
+// TODO: The padding needs to incorporate the toolbar here
+$window-padding: ($artboard-grid-px * 2) $artboard-grid-px $artboard-grid-px $artboard-grid-px;
+$window-height: $divider-px;
+$window-width: $divider-px;
+
+// Pane
+$pane-height: $window-height - nth($window-padding, 1) - nth($window-padding, 3);
+$pane-width: $window-width - nth($window-padding, 2) - nth($window-padding, 2);
+$pane-left: nth($window-padding, 4);
+$pane-top: nth($window-padding, 1);
+
+// Toolbar
+$toolbar-height: nth($window-padding, 1);
+$dot-size: 6px;
+$dot-top: ($toolbar-height - $dot-size) / 2;
+$dot-offset-left: $artboard-grid-px;
+
+header {
+  margin: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.monitor {
+  background-color: $monitor-background-color;
+  border-radius: 32px;
+  height: $monitor-height;
+  left: $monitor-left;
+  position: absolute;
+  top: $monitor-top;
+  width: $monitor-width;
+
+  .screen {
+    background-color: $screen-background-color;
+    border-radius: 8px;
+    height: $screen-height;
+    left: $screen-left;
+    position: absolute;
+    top: $screen-top;
+    width: $screen-width;
+  }
+}
+
+.window {
+  background-color: $window-background-color;
+  border-radius: 8px;
+  height: $window-height;
+  position: absolute;
+  width: $window-width;
+
+  .pane {
+    background-color: $screen-background-color;
+    height: $pane-height;
+    left: $pane-left;
+    position: absolute;
+    top: $pane-top;
+    width: $pane-width;
+  }
+
+  .toolbar {
+    padding-left: $pane-left;
+
+    .dot {
+      background-color: $screen-background-color;
+      border-radius: 50%;
+      float: left;
+      height: $dot-size;
+      position: absolute;
+      top: $dot-top;
+      width: $dot-size;
+    }
+
+    .dot:nth-child(1) {
+      left: $dot-offset-left;
+    }
+
+    .dot:nth-child(2) {
+      left: $dot-offset-left * 2;
+    }
+
+    .dot:nth-child(3) {
+      left: $dot-offset-left * 3;
+    }
+  }
+}
