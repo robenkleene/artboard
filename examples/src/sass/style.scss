@@ -13,7 +13,7 @@ $divider-px: $artboard-grid-px * $artboard-divider-interval;
 // Monitor
 $monitor-padding-px: $artboard-grid-px * 3;
 $monitor-padding: $monitor-padding-px $monitor-padding-px $monitor-padding-px $monitor-padding-px;
-$monitor-background-color: #000;
+$monitor-background-color: rgb(108, 108, 108);
 $monitor-left: $divider-px - nth($monitor-padding, 4);
 $monitor-top: $divider-px - nth($monitor-padding, 1);
 
@@ -31,7 +31,7 @@ $monitor-height: $screen-height + nth($monitor-padding, 1) + nth($monitor-paddin
 $monitor-width: $screen-width + nth($monitor-padding, 2) + nth($monitor-padding, 4);
 
 // Window
-$window-background-color: rgb(142, 142, 142);
+$window-background-color: rgb(172, 172, 172);
 // TODO: The padding needs to incorporate the toolbar here
 $window-padding: ($artboard-grid-px * 2) $artboard-grid-px $artboard-grid-px $artboard-grid-px;
 $window-height: $divider-px;
@@ -48,10 +48,6 @@ $toolbar-height: nth($window-padding, 1);
 $dot-size: 6px;
 $dot-top: ($toolbar-height - $dot-size) / 2;
 $dot-offset-left: $artboard-grid-px;
-
-header {
-  margin: 20px;
-}
 
 body {
   margin: 0;

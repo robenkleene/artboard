@@ -13,14 +13,11 @@
   width: 100%;
   z-index: 1000; }
 
-header {
-  margin: 20px; }
-
 body {
   margin: 0; }
 
 .monitor {
-  background-color: #000;
+  background-color: #6c6c6c;
   border-radius: 32px;
   height: 360px;
   left: 70px;
@@ -37,7 +34,7 @@ body {
     width: 400px; }
 
 .window {
-  background-color: #8e8e8e;
+  background-color: #acacac;
   border-radius: 8px;
   height: 100px;
   position: absolute;
