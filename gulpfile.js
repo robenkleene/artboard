@@ -31,8 +31,8 @@ paths.html = {
 
 paths.sass = {
   dist: {
-    src: paths.dist.src,
-    dest: paths.dist.dest
+    src: path.join(paths.dist.src, "sass"),
+    dest: path.join(paths.dist.dest, "css")
   },
   examples: {
     src: path.join(paths.examples.src, "sass"),
