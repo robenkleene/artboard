@@ -25,12 +25,16 @@ var paths = {
 };
 
 // Languages
-paths.html.examples = basePaths.examples;
+paths.html = {
+  examples: basePaths.examples
+};
+
 paths.sass = {
   dist: {
-    src: paths.src,
-    dest: paths.dest
-  }, examples: {
+    src: paths.dist.src,
+    dest: paths.dist.dest
+  },
+  examples: {
     src: path.join(paths.examples.src, "sass"),
     dest: path.join(paths.examples.dest, "css")
   }
@@ -40,23 +44,23 @@ paths.sass = {
 var globs = {
   sass: {
     dist: {
-      src: path.join(paths.dist.sass.src, '**/*.scss')
+      src: path.join(paths.sass.dist.src, '**/*.scss')
     },
     examples: {
-      src: path.join(paths.examples.sass.src, '**/*.scss')
+      src: path.join(paths.sass.examples.src, '**/*.scss')
     }
   },
   html: {
-    dest: path.join(paths.examples.html, "*.html")
+    dest: path.join(paths.html.examples, '*.html')
   }
 };
 
 // Helper
 
 function buildSass(src, dest) {
-  return gulp.src(globs.sass.src)
+  return gulp.src(src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(paths.sass.dest))
+    .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
 }
 
