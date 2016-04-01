@@ -2,6 +2,8 @@
 
 Artboard is a simple way to add a checkered grid to any HTML element with CSS or SCSS.
 
+![Example](assets/example.png)
+
 ## Usage
 
 ## Basic
