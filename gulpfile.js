@@ -51,7 +51,7 @@ var globs = {
     }
   },
   html: {
-    dest: path.join(paths.html.examples, '*.html')
+    examples: path.join(paths.html.examples, '*.html')
   }
 };
 
