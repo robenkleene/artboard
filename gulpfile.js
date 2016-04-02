@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var validate = require('gulp-nice-package');
 
 // Built-in
 var path = require('path');
@@ -88,5 +89,10 @@ gulp.task('watch', ['sass'], function () {
   gulp.watch(globs.sass.dist.src, ['sass-dist']);
 });
 
+gulp.task('validate', function () {
+  return gulp.src('package.json')
+    .pipe(validate('npm'));
+});
+
 gulp.task('sass', ['sass-dist', 'sass-examples']);
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'validate']);
