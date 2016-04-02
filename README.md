@@ -4,9 +4,13 @@ Artboard is a simple way to add a checkered grid to any HTML element with CSS or
 
 <img src="assets/example.png" alt="Example" height="499x">
 
+## Inspiration
+
+The approach of using a gradient as a background is borrowed from [this ingenious hack](http://stackoverflow.com/questions/4191260/drawing-a-grid-using-css/28344125#28344125) from [user3061127](http://stackoverflow.com/users/3061127/user3061127) on Stack Overflow.
+
 ## Installation
 
-<!-- TODO: Author -->
+    npm install artboard
 
 ## Usage
 
