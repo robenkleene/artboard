@@ -75,8 +75,6 @@ body {
   }
 }
 
-
-
 @keyframes resize-window {
   0% {
     height: $window-height;
@@ -93,7 +91,6 @@ body {
     width: $window-width;
   }
 }
-
 
 .window {
   animation-duration: 3s;
