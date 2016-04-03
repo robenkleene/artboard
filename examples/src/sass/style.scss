@@ -25,10 +25,12 @@ $screen-width: $divider-px * $screen-aspect-ratio-x;
 $screen-height: $screen-width * ($screen-aspect-ratio-y / $screen-aspect-ratio-x);
 $screen-left: nth($monitor-padding, 4);
 $screen-top: nth($monitor-padding, 1);
+$screen-borer-radius: 10px;
 
 // Monitor
 $monitor-height: $screen-height + nth($monitor-padding, 1) + nth($monitor-padding, 3);
 $monitor-width: $screen-width + nth($monitor-padding, 2) + nth($monitor-padding, 4);
+$monitor-border-radius: $artboard-grid-px * 3;
 
 // Window
 $window-background-color: rgb(172, 172, 172);
@@ -45,7 +47,7 @@ $pane-top: nth($window-padding, 1);
 
 // Toolbar
 $toolbar-height: nth($window-padding, 1);
-$dot-size: 6px;
+$dot-size: $artboard-grid-px / 2;
 $dot-top: ($toolbar-height - $dot-size) / 2;
 $dot-offset-left: $artboard-grid-px;
 
@@ -55,7 +57,7 @@ body {
 
 .monitor {
   background-color: $monitor-background-color;
-  border-radius: 32px;
+  border-radius: $monitor-border-radius;
   height: $monitor-height;
   left: $monitor-left;
   position: absolute;
@@ -64,7 +66,7 @@ body {
 
   .screen {
     background-color: $screen-background-color;
-    border-radius: 8px;
+    border-radius: $screen-borer-radius;
     height: $screen-height;
     left: $screen-left;
     position: absolute;
@@ -75,7 +77,7 @@ body {
 
 .window {
   background-color: $window-background-color;
-  border-radius: 8px;
+  border-radius: $screen-borer-radius;
   height: $window-height;
   position: absolute;
   width: $window-width;

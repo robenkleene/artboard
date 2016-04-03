@@ -18,7 +18,7 @@ body {
 
 .monitor {
   background-color: #6c6c6c;
-  border-radius: 32px;
+  border-radius: 30px;
   height: 360px;
   left: 70px;
   position: absolute;
@@ -26,7 +26,7 @@ body {
   width: 460px; }
   .monitor .screen {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     height: 300px;
     left: 30px;
     position: absolute;
@@ -35,7 +35,7 @@ body {
 
 .window {
   background-color: #acacac;
-  border-radius: 8px;
+  border-radius: 10px;
   height: 100px;
   position: absolute;
   width: 100px; }
@@ -52,10 +52,10 @@ body {
       background-color: #fff;
       border-radius: 50%;
       float: left;
-      height: 6px;
+      height: 5px;
       position: absolute;
-      top: 7px;
-      width: 6px; }
+      top: 7.5px;
+      width: 5px; }
     .window .toolbar .dot:nth-child(1) {
       left: 10px; }
     .window .toolbar .dot:nth-child(2) {
