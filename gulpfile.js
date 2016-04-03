@@ -65,7 +65,7 @@ function buildSass(src, dest) {
     .pipe(browserSync.stream());
 }
 
-// Tasts
+// Tasks
 
 gulp.task('sass-dist', function () {
   buildSass(globs.sass.dist.src, paths.sass.dist.dest);

@@ -42,8 +42,8 @@ $window-width: $divider-px;
 // Pane
 $pane-height: $window-height - nth($window-padding, 1) - nth($window-padding, 3);
 $pane-width: $window-width - nth($window-padding, 2) - nth($window-padding, 2);
-$pane-left: nth($window-padding, 4);
-$pane-top: nth($window-padding, 1);
+$pane-offset: nth($window-padding, 4);
+$pane-offset-top: nth($window-padding, 1);
 
 // Toolbar
 $toolbar-height: nth($window-padding, 1);
@@ -75,24 +75,44 @@ body {
   }
 }
 
+@keyframes resize-window {
+  0% {
+    height: $window-height;
+    width: $window-width;
+  }
+
+  50% {
+    height: $screen-height;
+    width: $screen-width;
+  }
+
+  100% {
+    height: $window-height;
+    width: $window-width;
+  }
+}
+
 .window {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: resize-window;
+  animation-timing-function: ease-in-out;
   background-color: $window-background-color;
   border-radius: $screen-borer-radius;
-  height: $window-height;
   position: absolute;
-  width: $window-width;
 
   .pane {
     background-color: $screen-background-color;
-    height: $pane-height;
-    left: $pane-left;
+    bottom: $pane-offset;
+    display: inline-block;
+    left: $pane-offset;
     position: absolute;
-    top: $pane-top;
-    width: $pane-width;
+    right: $pane-offset;
+    top: $pane-offset-top;
   }
 
   .toolbar {
-    padding-left: $pane-left;
+    padding-left: $pane-offset;
 
     .dot {
       background-color: $screen-background-color;
