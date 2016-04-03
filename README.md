@@ -102,3 +102,9 @@ Or included with a `@mixin`:
   @include artboard-overlay(.2);
 }
 ```
+
+## Animation Example
+
+Resolution independent graphics can be constructed with animation rules that both scale correctly.
+
+<img src="assets/example.gif" alt="Example" height="499x">
