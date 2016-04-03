@@ -1,6 +1,6 @@
 # Artboard
 
-Artboard is a simple way to add a checkered grid to any HTML element with CSS or SCSS. The intended use case is to create provide a grid for creating art assets in HTML, CSS and JavaScript.
+Artboard is a simple way to add a checkered grid to any HTML element with CSS or SCSS. The intended use case is to provide a grid for creating art assets in HTML, CSS and JavaScript.
 
 <img src="assets/example.png" alt="Example" height="499x">
 
