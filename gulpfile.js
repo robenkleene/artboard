@@ -30,6 +30,10 @@ paths.html = {
   examples: basePaths.examples
 };
 
+paths.javascript = {
+  examples: path.join(basePaths.examples, "js")
+};
+
 paths.sass = {
   dist: {
     src: path.join(paths.dist.src, "sass"),
@@ -53,6 +57,9 @@ var globs = {
   },
   html: {
     examples: path.join(paths.html.examples, '*.html')
+  },
+  javascript: {
+    examples: path.join(paths.javascript.examples, '*.js')
   }
 };
 
@@ -80,7 +87,7 @@ gulp.task('serve', ['sass'], function() {
         server: paths.html.examples
     });
     gulp.watch([globs.sass.examples.src, globs.sass.dist.src], ['sass-examples']);
-    gulp.watch(globs.html.examples)
+    gulp.watch([globs.html.examples, globs.javascript.examples])
       .on('change', browserSync.reload);
 });
 
