@@ -33,13 +33,19 @@ body {
     top: 30px;
     width: 400px; }
 
+.window-frame-1 {
+  width: 100px;
+  height: 100px; }
+
+.window-frame-2 {
+  width: 400px;
+  height: 300px; }
+
 .window {
   background-color: #acacac;
   border-radius: 10px;
-  height: 100px;
   position: absolute;
-  transition: 300ms linear;
-  width: 100px; }
+  transition: 300ms linear; }
   .window .pane {
     background-color: #fff;
     bottom: 10px;

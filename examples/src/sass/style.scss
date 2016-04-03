@@ -75,13 +75,21 @@ body {
   }
 }
 
+.window-frame-1 {
+  width: $window-width;
+  height: $window-height;
+}
+
+.window-frame-2 {
+  width: $screen-width;
+  height: $screen-height;
+}
+
 .window {
   background-color: $window-background-color;
   border-radius: $screen-borer-radius;
-  height: $window-height;
   position: absolute;
   transition: 300ms linear;
-  width: $window-width;
 
   .pane {
     background-color: $screen-background-color;
