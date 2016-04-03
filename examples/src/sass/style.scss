@@ -75,15 +75,7 @@ body {
   }
 }
 
-.window-frame-1 {
-  width: $window-width;
-  height: $window-height;
-}
 
-.window-frame-2 {
-  width: $screen-width;
-  height: $screen-height;
-}
 
 @keyframes resize-window {
   0% {
@@ -104,7 +96,10 @@ body {
 
 
 .window {
-  animation: resize-window 1s infinite;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: resize-window;
+  animation-timing-function: ease-in-out;
   background-color: $window-background-color;
   border-radius: $screen-borer-radius;
   position: absolute;

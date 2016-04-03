@@ -33,14 +33,6 @@ body {
     top: 30px;
     width: 400px; }
 
-.window-frame-1 {
-  width: 100px;
-  height: 100px; }
-
-.window-frame-2 {
-  width: 400px;
-  height: 300px; }
-
 @keyframes resize-window {
   0% {
     height: 100px;
@@ -53,7 +45,10 @@ body {
     width: 100px; } }
 
 .window {
-  animation: resize-window 1s infinite;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: resize-window;
+  animation-timing-function: ease-in-out;
   background-color: #acacac;
   border-radius: 10px;
   position: absolute; }
