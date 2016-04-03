@@ -38,14 +38,16 @@ body {
   border-radius: 10px;
   height: 100px;
   position: absolute;
+  transition: 300ms linear;
   width: 100px; }
   .window .pane {
     background-color: #fff;
-    height: 70px;
+    bottom: 10px;
+    display: inline-block;
     left: 10px;
     position: absolute;
-    top: 20px;
-    width: 80px; }
+    right: 10px;
+    top: 20px; }
   .window .toolbar {
     padding-left: 10px; }
     .window .toolbar .dot {

@@ -42,8 +42,8 @@ $window-width: $divider-px;
 // Pane
 $pane-height: $window-height - nth($window-padding, 1) - nth($window-padding, 3);
 $pane-width: $window-width - nth($window-padding, 2) - nth($window-padding, 2);
-$pane-left: nth($window-padding, 4);
-$pane-top: nth($window-padding, 1);
+$pane-offset: nth($window-padding, 4);
+$pane-offset-top: nth($window-padding, 1);
 
 // Toolbar
 $toolbar-height: nth($window-padding, 1);
@@ -80,19 +80,21 @@ body {
   border-radius: $screen-borer-radius;
   height: $window-height;
   position: absolute;
+  transition: 300ms linear;
   width: $window-width;
 
   .pane {
     background-color: $screen-background-color;
-    height: $pane-height;
-    left: $pane-left;
+    bottom: $pane-offset;
+    display: inline-block;
+    left: $pane-offset;
     position: absolute;
-    top: $pane-top;
-    width: $pane-width;
+    right: $pane-offset;
+    top: $pane-offset-top;
   }
 
   .toolbar {
-    padding-left: $pane-left;
+    padding-left: $pane-offset;
 
     .dot {
       background-color: $screen-background-color;
