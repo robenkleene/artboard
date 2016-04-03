@@ -85,11 +85,29 @@ body {
   height: $screen-height;
 }
 
+@keyframes resize-window {
+  0% {
+    height: $window-height;
+    width: $window-width;
+  }
+
+  50% {
+    height: $screen-height;
+    width: $screen-width;
+  }
+
+  100% {
+    height: $window-height;
+    width: $window-width;
+  }
+}
+
+
 .window {
+  animation: resize-window 1s infinite;
   background-color: $window-background-color;
   border-radius: $screen-borer-radius;
   position: absolute;
-  transition: 300ms linear;
 
   .pane {
     background-color: $screen-background-color;
