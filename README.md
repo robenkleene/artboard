@@ -2,7 +2,7 @@
 
 Artboard is a simple way to add a checkered grid to any HTML element with CSS or SCSS. The intended use case is to provide a grid for creating art assets in HTML, CSS and JavaScript.
 
-<img src="assets/example.png" alt="Example" height="499x">
+<img src="assets/example.png" alt="Example" height="495">
 
 ## Inspiration
 
@@ -107,4 +107,4 @@ Or included with a `@mixin`:
 
 One advantage to creating assets in HTML, CSS and JavaScript is that scalable graphics can be created alongside animation logic that also scales. In the included example, animated HTML elements are positioned on the grid; changing the grid size also changes the positions of all these elements, as well as the animation, while everything continues to remain in scale.
 
-<img src="assets/example.gif" alt="Example" height="499x">
+<img src="assets/example.gif" alt="Example" height="495">
