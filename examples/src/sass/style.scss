@@ -11,17 +11,17 @@ $divider-px: $artboard-grid-px * $artboard-divider-interval;
 // Assets
 
 // Monitor
-$monitor-padding-px: $artboard-grid-px * 3;
-$monitor-padding: $monitor-padding-px $monitor-padding-px $monitor-padding-px $monitor-padding-px;
+$monitor-padding-px: $artboard-grid-px * 2;
+$monitor-padding: $monitor-padding-px $monitor-padding-px ($monitor-padding-px * 2) $monitor-padding-px;
 $monitor-background-color: rgb(108, 108, 108);
 $monitor-left: $divider-px - nth($monitor-padding, 4);
 $monitor-top: $divider-px - nth($monitor-padding, 1);
 
 // Screen
 $screen-background-color: #fff;
-$screen-aspect-ratio-y: 3;
-$screen-aspect-ratio-x: 4;
-$screen-width: $divider-px * $screen-aspect-ratio-x;
+$screen-aspect-ratio-y: 2;
+$screen-aspect-ratio-x: 3;
+$screen-width: ($divider-px * $screen-aspect-ratio-x);
 $screen-height: $screen-width * ($screen-aspect-ratio-y / $screen-aspect-ratio-x);
 $screen-left: nth($monitor-padding, 4);
 $screen-top: nth($monitor-padding, 1);
@@ -75,31 +75,108 @@ body {
   }
 }
 
+$resize-window-num-frames: 11;
+
+@function resize-window-step($step) {
+  @return $step / $resize-window-num-frames * 100%;
+}
+
 @keyframes resize-window {
-  0% {
+  #{resize-window-step(0)} {
     height: $window-height;
+    left: 0;
     width: $window-width;
   }
 
-  50% {
+  #{resize-window-step(1)} {
+    height: $window-height;
+    left: $window-height;
+    top: 0;
+    width: $window-width;
+  }
+
+  #{resize-window-step(2)} {
+    height: $window-height;
+    left: $window-height * 2;
+    top: 0;
+    width: $window-width;
+  }
+
+  #{resize-window-step(3)} {
+    height: $window-height;
+    left: $window-height * 2;
+    top: $window-height;
+    width: $window-width;
+  }
+
+  #{resize-window-step(4)} {
+    height: $window-height;
+    left: $window-height;
+    top: $window-height;
+    width: $window-width;
+  }
+
+  #{resize-window-step(5)} {
+    height: $window-height;
+    left: 0;
+    top: $window-height;
+    width: $window-width;
+  }
+
+  #{resize-window-step(6)} {
+    height: $window-height;
+    left: 0;
+    top: 0;
+    width: $window-width;
+  }
+
+  #{resize-window-step(7)} {
+    height: $window-height * 2;
+    left: 0;
+    top: 0;
+    width: $window-width * 1.5;
+  }
+
+  #{resize-window-step(8)} {
+    height: $window-height * 2;
+    left: $window-width * 1.5;
+    top: 0;
+    width: $window-width * 1.5;
+  }
+
+  #{resize-window-step(9)} {
+    height: $window-height;
+    left: 0;
+    top: 0;
+    width: $window-width;
+  }
+
+  #{resize-window-step(10)} {
     height: $screen-height;
+    left: 0;
+    top: 0;
     width: $screen-width;
   }
 
-  100% {
+  #{resize-window-step(11)} {
     height: $window-height;
+    left: 0;
+    top: 0;
     width: $window-width;
   }
 }
 
 .window {
-  animation-duration: 3s;
+
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-name: resize-window;
   animation-timing-function: ease-in-out;
   background-color: $window-background-color;
   border-radius: $screen-borer-radius;
+  height: $window-height;
   position: absolute;
+  width: $window-width;
 
   .pane {
     background-color: $screen-background-color;
