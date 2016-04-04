@@ -51,6 +51,10 @@ $dot-size: $artboard-grid-px / 2;
 $dot-top: ($toolbar-height - $dot-size) / 2;
 $dot-offset-left: $artboard-grid-px;
 
+// Logo
+$logo-size: $artboard-grid-px * 1.5;
+$logo-bottom: (nth($monitor-padding, 3) - $logo-size) / 2;
+
 body {
   margin: 0;
 }
@@ -72,6 +76,18 @@ body {
     position: absolute;
     top: $screen-top;
     width: $screen-width;
+  }
+
+  .logo {
+    background-color: $screen-background-color;
+    border-radius: 50%;
+    bottom: $logo-bottom;
+    height: $logo-size;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: $logo-size;
   }
 }
 
