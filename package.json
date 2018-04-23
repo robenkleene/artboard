@@ -1,6 +1,6 @@
 {
   "name": "artboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Artboard is a simple way to add a checkered grid to an HTML document.",
   "author": "Roben Kleene <contact@robenkleene.com>",
   "contributors": [{
