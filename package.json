@@ -2,10 +2,10 @@
   "name": "artboard",
   "version": "0.0.1",
   "description": "Artboard is a simple way to add a checkered grid to an HTML document.",
-  "author": "Roben Kleene <roben@1percenter.com>",
+  "author": "Roben Kleene <contact@robenkleene.com>",
   "contributors": [{
     "name": "Roben Kleene",
-    "email": "roben@1percenter.com"
+    "email": "contact@robenkleene.com"
   }],
   "homepage": "https://github.com/robenkleene/artboard",
   "repository": {
